@@ -73,8 +73,20 @@ console.log(distance1, distance2)
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(ar) {
+  let fb = [];
+  for(let index=0;index<ar.length;index++){
+    if(ar[index]%3===0 &&ar[index]%5===0){
+      fb.push('fizzBuzz')
+    }else if(ar[index]%3===0){
+      fb.push( 'fizz')
+    }else if(ar[index]%5===0){
+      fb.push( 'buzz')
+    }else{
+      fb.push( 'bug!')
+    }
+  }
+  return fb
 }
 
 // Desafio 9
