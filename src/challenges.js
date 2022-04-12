@@ -46,10 +46,30 @@ function highestCount(arr) {
   
 return times
 }
-highestCount([-2, -2, -1])
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let distance1 = 0
+let distance2 = 0
+if(cat1>0 && cat2>0){
+  distance1 = cat1 - mouse 
+  distance2 = cat2 - mouse
+}else if(cat1>0 && cat2<=0){
+  distance1 = mouse - cat1 
+  distance2 = cat2 - mouse
+}else {
+  distance1 = cat1 - mouse
+  distance2 = mouse - cat2
+}
+console.log(distance1, distance2)
+  if(distance1>distance2){
+    return 'cat2'
+  }else if(distance1===distance2){
+    return 'os gatos trombam e o rato foge'
+  }else{
+    return 'cat1'
+  }
+  
 }
 
 // Desafio 8
