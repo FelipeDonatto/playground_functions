@@ -130,10 +130,25 @@ return phrase
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(ar, name) {
+if(ar.length===0){
+  return "Vazio!"
+}else{
+  let list = [];
+  let sortedList = ar;
+  sortedList.sort();
+  for(let i = 0; i<sortedList.length; i++){
+    list.push({
+      'tech': sortedList[i],
+      'name': name
+    })
+  }
+  return list
 }
 
+}
+
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')
 module.exports = {
   calcArea,
   catAndMouse,
